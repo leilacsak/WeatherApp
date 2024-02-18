@@ -26,6 +26,7 @@ async function getWeather() {
         console.error('Error fetching weather data:', error);
         alert('Error fetching weather data. Please try again later.');
     }
-    
-    document.getElementById('weather-button').addEventListener('click', getWeather);
 }
+
+document.getElementById('weather-button').addEventListener('click', getWeather);
+   
