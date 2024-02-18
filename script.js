@@ -18,6 +18,10 @@ async function getWeather() {
             <p>Humidity: ${data.main.humidity}%</p>
             <p>Wind Speed: ${data.wind.speed} m/s</p>
         `;
+
+        const weatherButton = document.getElementById('weather-button');
+        weatherButton.innerText = 'Get new weather';
+
     } catch (error) {
         console.error('Error fetching weather data:', error);
         alert('Error fetching weather data. Please try again later.');
