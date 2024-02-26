@@ -3,6 +3,8 @@ async function getWeather() {
     const city = prompt('Enter city name:');
     if (!city) return;
 
+    clearErrorMessage();
+
 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -25,6 +27,11 @@ async function getWeather() {
 function displayErrorMessage(message) {
     const errorMessage = document.getElementById('error-message');
     errorMessage.textContent = message;
+}
+
+function clearErrorMessage() {
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = '';
 }
   
 function displayWeatherInfo(city,data) {
